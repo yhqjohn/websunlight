@@ -1,3 +1,15 @@
 
-<body style="background-color:#FFFFFF;">
+<body style="background-color:#FFFFFF;" id="d">
+    <script src="sunlight.js"></script>
+    <script>
+        var fn = function(){            
+            var c= document.getElementById('d');
+            var h;
+            var date = new Date()
+            h = date.getHours();
+            c.style.backgroundColor = rgbToHex.apply(this,hourSunlight(h));
+        }
+     
+        setInterval(fn,1000);
+    </script>
 </body>
