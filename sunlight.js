@@ -51,6 +51,11 @@ function hourSunlight(hour) {
     return sunlight(multiInterpolate(sunTemperature, hour), multiInterpolate(sunIrradiance, hour)) 
 }
 
+
+function hourSunlight2(hour) {
+    
+}
+
 function componentToHex(c) {
     var hex = Math.round(c).toString(16);
     return hex.length == 1 ? "0" + hex : hex;
