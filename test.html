@@ -1,33 +1,20 @@
 <head>
-<style>
-    #d {
-        height: 150px;
-        width: 200px;
-        background-color: rgb(255, 255, 255); /* 浏览器不支持的时候显示 */
-        background-image: radial-gradient(red, green, blue); /* 标准的语法（必须放在最后） */
-    }
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js" integrity="sha512-OZ6CXzl5JrSc9OM1lxp1OC+zt5gCTVAqy7nWwbdSUE98akAvGl/20WaIqsRUnSpBG+QBkcMkiJVfFvybZ6PtKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="interpolate.js"></script>
-<script src=config.js></script>
-
+    
+    <link rel="stylesheet" type="text/css" href="duirnal.css">
+    <link rel="stylesheet" type="text/css" href="clock.css">
 </head>
 
-<body id="d">
-    <p id="p1">Hello World!</p>
-    <script>
-        var fn = function(){            
-            var c= document.getElementById('d');
-            var h;
-            var date = new Date()
-            h = date.getHours() + date.getMinutes()/60;
-            var centre = interpolate(centre_arr,h)
-            var edge = interpolate(edge_arr, h)
-            c.style.backgroundImage = `radial-gradient(rgb(${centre}), rgb(${centre}), rgb(${centre}), rgb(${edge}))`
-        }
-     
-        setInterval(fn,1000);
-        
-        document.getElementById("p1").innerHTML = `hello kitty!${mid}`;
-    </script>
+<body>    
+     <div class="clock">
+        <div id="Date"></div>
+        <ul>
+            <li id="hours"></li>
+            <li id="point">:</li>
+            <li id="min"></li>
+            <li id="point">:</li>
+            <li id="sec"></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="clock.js"></script>
 </body>
