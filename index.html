@@ -1,30 +1,24 @@
 <head>
-    <style>
-        #d {
-            height: 150px;
-            width: 200px;
-            background-color: rgb(255, 255, 255);
-            background-image: radial-gradient(white, white, gold);
-        }
-    </style>
+    
+    <link rel="stylesheet" type="text/css" href="duirnal.css">
+    <link rel="stylesheet" type="text/css" href="clock.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js" integrity="sha512-OZ6CXzl5JrSc9OM1lxp1OC+zt5gCTVAqy7nWwbdSUE98akAvGl/20WaIqsRUnSpBG+QBkcMkiJVfFvybZ6PtKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="interpolate.js"></script>
     <script src=config.js></script>
-    
-    </head>
-    
-    <body id="d">
-        <script>
-            var fn = function(){            
-                var c= document.getElementById('d');
-                var h;
-                var date = new Date()
-                h = date.getHours() + date.getMinutes()/60;
-                var centre = interpolate(centre_arr,h)
-                var edge = interpolate(edge_arr, h)
-                c.style.backgroundImage = `radial-gradient(rgb(${centre}), rgb(${centre}), rgb(${centre}), rgb(${edge}))`
-            }
-         
-            setInterval(fn,1000);
-        </script>
-    </body>
+</head>
+
+<body id='d'>    
+    <div class="clock">
+        <div class="container">
+            <h2 id="hours">00</h2>
+            <h2 class="dots">:</h2>
+            <h2 id="minuts">00</h2>
+            <h2 class="dots">:</h2>
+            <h2 id="seconds">00</h2>
+            <!--span id="ampm">AM</span!-->
+        </div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="duirnal.js"></script>
+</body>
