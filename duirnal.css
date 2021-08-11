@@ -2,3 +2,28 @@ body {
     height: 150px;
     width: 200px;
 }
+
+.star {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  
+.bg {
+    opacity: 0.2;
+    min-height: 100%;
+    min-width: 1024px;
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+  
