@@ -40,7 +40,7 @@ function duirnal () {
     [centre, edge] = getRGB(h)
     opacity = getOpacity(h)
     sky = `radial-gradient(rgb(${centre}), rgb(${centre}), rgb(${centre}), rgb(${edge}))`
-    $('#d').css('backgroundImage', sky)
+    $('#d').css('background', sky)
     $('.bg').css('opacity', opacity)
 }
 
